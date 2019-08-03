@@ -1,0 +1,63 @@
+body {
+	background-color: #f0f0f0;
+}
+.configurator-container {
+	height: 50rem;
+	text-align: center;
+}
+
+.preview-box {
+	border: 1px solid black;
+
+	height: 5rem;
+	margin-top: 2rem;
+}
+
+.configurator {
+	height: 45rem;
+}
+
+.product {
+	/* background-color: #ccc; */
+}
+
+.controls {
+	margin-top: 5rem;
+}
+
+.controls-panel {
+	box-shadow: 0 4px 6px #ccc;
+	background-color: #f9f9f9;
+}
+
+.controls-footer__btn {
+	margin-top: 2rem;
+}
+
+.controls-footer__btn button {
+	/* background-color: transparent;
+	border: 1px solid red;
+	border-radius: 10px;
+	font-weight: 600; */
+}
+
+.controls-footer__btn button:hover {
+	box-shadow: 0 4px 6px #ccc;
+}
+
+.canvas {
+	margin-left: 10rem;
+	margin-top: 1rem;
+}
+
+#canvas-wrap {
+	position: relative;
+} /* Make this a positioned parent */
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,20 @@
+.product-container {
+}
+
+.products {
+	margin-top: 3rem;
+}
+
+.product-item {
+	transition: .2s ease-in;
+}
+
+.product-item:hover {
+	cursor: pointer;
+	box-shadow: 0 2px 4px #ccc;
+	transform: scale(1.1);
+}
+
+#title {
+	transform: scale3d(1deg);
+}
