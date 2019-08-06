@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad5a3f2-e6bb-499a-b5a9-9ea8d01333f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product1-collar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product1-collar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product1-main.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product1-main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ColorPicker/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ColorPicker/ColorPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Designer/Designer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Designer/Designer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +14,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OrdydvIrZpC0hJcx8tK1A9qAjN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -51,7 +61,12 @@
       <workItem from="1564827772439" duration="213000" />
       <workItem from="1564828292318" duration="52000" />
       <workItem from="1564828457257" duration="209000" />
-      <workItem from="1564828689700" duration="2537000" />
+      <workItem from="1564828689700" duration="2540000" />
+      <workItem from="1564988034291" duration="2724000" />
+      <workItem from="1564993130405" duration="893000" />
+      <workItem from="1564997487117" duration="9430000" />
+      <workItem from="1565071272002" duration="11414000" />
+      <workItem from="1565088881972" duration="7508000" />
     </task>
     <servers />
   </component>
@@ -63,7 +78,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

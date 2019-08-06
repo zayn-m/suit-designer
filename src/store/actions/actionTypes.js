@@ -1,0 +1,7 @@
+// FONT SELECTOR
+export const ADD_TEXT = 'ADD_TEXT';
+export const REMOVE_TEXT = 'REMOVE_TEXT';
+
+// DESIGNER
+export const TOGGLE_COLORS = 'TOGGLE_COLORS';
+export const TOGGLE_TEXT = 'TOGGLE_TEXT';
