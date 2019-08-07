@@ -1,2 +1,10 @@
-export { addText } from './fontSelector';
-export {toggleColorPicker, toggleText} from './designer';
+export {
+  addText,
+  changeColor,
+  fontStyle,
+  fontSize,
+  changeoutlineColor
+} from "./fontSelector";
+export { toggleColorPicker, toggleText, toggleAddLogo } from "./designer";
+
+export { addLogo } from "./addLogo";

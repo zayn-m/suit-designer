@@ -1,0 +1,93 @@
+import React from "react";
+import "./AddLogo.css";
+import { connect } from "react-redux";
+
+import * as actions from "../../store/actions/index";
+
+class AddLogo extends React.Component {
+  state = {
+    imgs: []
+  };
+
+  constructor(props) {
+    super(props);
+    this.inputOpenFileRef = React.createRef(this);
+  }
+
+  showOpenFileDlg = () => {
+    this.inputOpenFileRef.current.click();
+  };
+
+  onChangeFile = event => {
+    event.stopPropagation();
+    event.preventDefault();
+    if (event.target.files && event.target.files[0]) {
+      let reader = new FileReader();
+      reader.onload = e => {
+        const imgs = this.state.imgs;
+        imgs.push(e.target.result);
+        this.setState({ imgs: imgs });
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // console.log(event.target.result);
+    // var file = event.target.files[0];
+    // console.log(file);
+    // // this.props.addLogo(file);
+    // const imgs = this.state.imgs;
+    // imgs.push(file);
+    // this.setState({ imgs }); /// if you want to upload latter
+  };
+
+  render() {
+    console.log(this.state.imgs);
+    return (
+      <div>
+        <div className="row ">
+          <div
+            className="col-3 border mr-1"
+            style={{ height: "4rem", cursor: "pointer" }}
+            onClick={this.showOpenFileDlg}
+          >
+            <i className="fas fa-plus mt-4" />
+            <input
+              ref={this.inputOpenFileRef}
+              type="file"
+              style={{ display: "none" }}
+              onChange={this.onChangeFile}
+            />
+          </div>
+          {this.state.imgs.map((img, i) => (
+            <div
+              className="col-3 p-0 no-gutters border"
+              key={i}
+              style={{ height: "4rem" }}
+            >
+              <img
+                className="img-fluid"
+                style={{ width: "100%", height: "70%" }}
+                src={img}
+                alt="thumbnail"
+              />
+              <span className="float-left ml-1" style={{ cursor: "pointer" }}>
+                <i className="fas fa-plus-square" />
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addLogo: img => dispatch(actions.addLogo(img))
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AddLogo);
