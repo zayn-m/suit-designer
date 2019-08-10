@@ -8,6 +8,7 @@ import PinchZoomPan from "react-responsive-pinch-zoom-pan";
 import ReactImageZoom from "react-image-zoom";
 import * as actions from "../../store/actions/index";
 
+import Layer from "../../components/Layer/Layer";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import FontSelector from "../../components/FontSelector/FontSelector";
 import AddLogo from "../../components/AddLogo/AddLogo";
@@ -93,8 +94,24 @@ class Designer extends React.Component {
     collar: collar1,
     activeColor: true,
     activeText: false,
-    activeLogo: false
+    activeLogo: false,
+    font: {
+      show: true,
+      imgs: {}
+    },
+    back: false,
+    imgs: {}
   };
+
+  componentWillMount() {
+    //this.setState({ imgs: this.props.location.state.product.front });
+    // this.setState(prevState => ({
+    //   ...prevState.imgs,
+    //   imgs: {
+    //     ...this.props.location.state.product.front
+    //   }
+    // }));
+  }
 
   componentDidMount() {
     console.log(this.props.insertedText);
@@ -105,6 +122,7 @@ class Designer extends React.Component {
     this.__canvas.on({
       "object:selected": this.onSelectTextElement
     });
+    this.setState({ imgs: this.props.location.state.product.front });
     // setTimeout(() => {
     // 	this.setState({ image: this.props.location.state.image });
     // }, 1000);
@@ -128,7 +146,7 @@ class Designer extends React.Component {
     text.setColor(this.props.fontColor);
     //text.fillStyle = this.props.fontColor;
     text.stroke = this.props.outlineColor;
-    text.strokeWidth = 0.5;
+    text.strokeWidth = 0.7;
     this.__canvas.add(text);
     this.__canvas.setActiveObject(text);
     //this.addLayer(newID, 'text');
@@ -149,7 +167,23 @@ class Designer extends React.Component {
     activeObject.fontSize = this.props.fontSize;
   };
 
-  addNewImageElement() {
+  addNewImageElement(e) {
+    console.log(e);
+    // var reader = new FileReader();
+    // reader.onload = function(event) {
+    //   var img = new Image();
+    //   img.onload = function() {
+    //     this.__canvas.width = img.width;
+    //     this.__canvas.height = img.height;
+    //     // ctx.drawImage(img, 0, 0);
+    //     this.__canvas.add(img);
+    //     this.__canvas.bringToFront(img);
+    //     this.__canvas.renderAll();
+    //   };
+    //   img.src = event.target.result;
+    //   console.log(img.src);
+    // };
+    // reader.readAsDataURL(e);
     // var canvas = new fabric.StaticCanvas('meCanvas');
     // var image;
     // var imgEl = document.createElement('img');
@@ -164,19 +198,21 @@ class Designer extends React.Component {
     // console.log(image.filters[0].rotation);
     // image.applyFilters();
     // canvas.requestRenderAll();
+    //
 
-    fabric.util.loadImage(Logo, img => {
+    fabric.util.loadImage(e, img => {
       const legimg = new fabric.Image(img, {
         left: 0,
         top: 0,
-        width: img.width / 1,
-        height: img.height / 1,
         lockUniScaling: true
       });
+      legimg.scaleToWidth(80);
+      legimg.scaleToHeight(80);
       // legimg.filters.rotation = 1.23123213;
       // console.log(legimg.filters.rotation);
       // legimg.fill = "rgb(232,43,123";
       // legimg.applyFilters();
+
       this.__canvas.add(legimg);
       this.__canvas.bringToFront(legimg);
       this.__canvas.renderAll();
@@ -205,78 +241,15 @@ class Designer extends React.Component {
   };
 
   handleChangeComplete = (color, event, layer) => {
-    if (layer === "mainColor") {
-      this.updateColorState(layer, color.hex, false);
-    }
-    if (layer === "secondColor") {
-      this.updateColorState(layer, color.hex, false);
-    }
-
-    if (layer === "thirdColor") {
-      this.updateColorState(layer, color.hex, false);
-    }
-
-    if (layer === "fourthColor") {
-      this.updateColorState(layer, color.hex, false);
-    }
-
-    if (layer === "collarColor") {
-      this.updateColorState(layer, color.hex, false);
-    }
-
-    if (layer === "beltColor") {
-      this.updateColorState(layer, color.hex, false);
-    }
+    this.updateColorState(layer, color.hex, false);
   };
 
   handleDisplayColorClick = layer => {
-    if (layer === "mainColor") {
-      this.updateColorState(layer, null, true);
-    }
-    if (layer === "secondColor") {
-      this.updateColorState(layer, null, true);
-    }
-
-    if (layer === "thirdColor") {
-      this.updateColorState(layer, null, true);
-    }
-
-    if (layer === "fourthColor") {
-      this.updateColorState(layer, null, true);
-    }
-
-    if (layer === "collarColor") {
-      this.updateColorState(layer, null, true);
-    }
-
-    if (layer === "beltColor") {
-      this.updateColorState(layer, null, true);
-    }
+    this.updateColorState(layer, null, true);
   };
 
   handleDisplayColorClose = layer => {
-    if (layer === "mainColor") {
-      this.updateColorState(layer, null, false);
-    }
-    if (layer === "secondColor") {
-      this.updateColorState(layer, null, false);
-    }
-
-    if (layer === "thirdColor") {
-      this.updateColorState(layer, null, false);
-    }
-
-    if (layer === "fourthColor") {
-      this.updateColorState(layer, null, false);
-    }
-
-    if (layer === "collarColor") {
-      this.updateColorState(layer, null, false);
-    }
-
-    if (layer === "beltColor") {
-      this.updateColorState(layer, null, false);
-    }
+    this.updateColorState(layer, null, false);
   };
 
   updateColorState = (key, code, colorPicker) => {
@@ -314,7 +287,16 @@ class Designer extends React.Component {
     }
   };
 
+  changeSideHandler = product => {
+    this.setState({ imgs: product });
+  };
+
   render() {
+    console.log(this.state.imgs);
+    const front = this.props.location.state.product.front;
+    const back = this.props.location.state.product.back;
+    const left = this.props.location.state.product.left;
+    const right = this.props.location.state.product.right;
     return (
       <section className="container  mt-5 configurator-container">
         <div className="header bg-danger">
@@ -326,10 +308,50 @@ class Designer extends React.Component {
 
         <div className="row configurator">
           <div className="col-1 ">
-            <div className="col-12 preview-box" />
-            <div className="col-12 preview-box" />
-            <div className="col-12 preview-box" />
-            <div className="col-12 preview-box" />
+            <div
+              className="col-12 preview-box border"
+              onClick={() => this.changeSideHandler(front)}
+            >
+              <img
+                className="img-fluid"
+                style={{ width: "100%", height: "100%" }}
+                src={front.thumb}
+                alt="front"
+              />
+            </div>
+            <div
+              className="col-12 preview-box p-0 border"
+              onClick={() => this.changeSideHandler(back)}
+            >
+              <img
+                className="img-fluid"
+                style={{ width: "100%", height: "100%" }}
+                src={back.thumb}
+                alt="back"
+              />
+            </div>
+            <div
+              className="col-12 preview-box border"
+              onClick={() => this.changeSideHandler(left)}
+            >
+              <img
+                className="img-fluid"
+                style={{ width: "100%", height: "100%" }}
+                src={left.thumb}
+                alt="left"
+              />
+            </div>
+            <div
+              className="col-12 preview-box border"
+              onClick={() => this.changeSideHandler(right)}
+            >
+              <img
+                className="img-fluid"
+                style={{ width: "100%", height: "100%" }}
+                src={right.thumb}
+                alt="right"
+              />
+            </div>
           </div>
           <div id="canvas-wrap" className="col-7 border ">
             <canvas
@@ -347,114 +369,130 @@ class Designer extends React.Component {
                   {/*	{...imgProps}*/}
                   {/*	img={Main}*/}
                   {/*/>*/}
-                  <img
-                    className="img-fluid"
-                    src={Main}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Main,
-                      position: "absolute",
-                      filter:
-                        this.state.colors.mainColor.selectedColor === ""
-                          ? this.state.colors.mainColor.startingColor
-                          : this.state.colors.mainColor.selectedColor
-                    }}
-                    alt="product"
+                  <Layer
+                    img={this.state.imgs.main}
+                    selectedColor={this.state.colors.mainColor.selectedColor}
+                    startingColor={this.state.colors.mainColor.startingColor}
                   />
-                  <img
-                    className="img-fluid"
-                    src={Second}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Second,
-                      position: "absolute",
-                      filter:
-                        this.state.colors.secondColor.selectedColor === ""
-                          ? this.state.colors.secondColor.startingColor
-                          : this.state.colors.secondColor.selectedColor
-                    }}
-                    alt="product"
+                  <Layer
+                    img={this.state.imgs.second}
+                    selectedColor={this.state.colors.secondColor.selectedColor}
+                    startingColor={this.state.colors.secondColor.startingColor}
                   />
-                  <img
-                    className="img-fluid"
-                    src={Third}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Third,
-                      position: "absolute",
-                      filter:
-                        this.state.colors.thirdColor.selectedColor === ""
-                          ? this.state.colors.thirdColor.startingColor
-                          : this.state.colors.thirdColor.selectedColor
-                    }}
-                    alt="product"
+                  <Layer
+                    img={this.state.imgs.third}
+                    selectedColor={this.state.colors.thirdColor.selectedColor}
+                    startingColor={this.state.colors.thirdColor.startingColor}
                   />
-                  <img
-                    className="img-fluid"
-                    src={Fourth}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Fourth,
-                      position: "absolute",
-                      filter:
-                        this.state.colors.fourthColor.selectedColor === ""
-                          ? this.state.colors.fourthColor.startingColor
-                          : this.state.colors.fourthColor.selectedColor
-                    }}
-                    alt="product"
+                  <Layer
+                    img={this.state.imgs.fourth}
+                    selectedColor={this.state.colors.fourthColor.selectedColor}
+                    startingColor={this.state.colors.fourthColor.startingColor}
                   />
-                  <img
-                    className="img-fluid"
-                    src={Collar}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Collar,
-                      position: "absolute",
-                      filter:
-                        this.state.colors.collarColor.selectedColor === ""
-                          ? this.state.colors.collarColor.startingColor
-                          : this.state.colors.collarColor.selectedColor
-                    }}
-                    alt="product"
+                  <Layer
+                    img={this.state.imgs.collar}
+                    selectedColor={this.state.colors.collarColor.selectedColor}
+                    startingColor={this.state.colors.collarColor.startingColor}
                   />
-                  <img
-                    className="img-fluid"
-                    src={Belt}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Belt,
-                      position: "absolute",
-                      filter:
-                        this.state.colors.beltColor.selectedColor === ""
-                          ? this.state.colors.beltColor.startingColor
-                          : this.state.colors.beltColor.selectedColor
-                    }}
-                    alt="product"
-                  />{" "}
-                  <img
-                    className="img-fluid"
-                    src={Texture}
-                    style={{
-                      marginLeft: "-10rem",
-                      width: "18rem",
-                      height: "40rem",
-                      backgroundImage: Texture,
-                      position: "absolute"
-                    }}
-                    alt="product"
+                  <Layer
+                    img={this.state.imgs.belt}
+                    selectedColor={this.state.colors.beltColor.selectedColor}
+                    startingColor={this.state.colors.beltColor.startingColor}
                   />
+                  {/*<Layer img={Texture} />*/}
+
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={this.state.imgs.second}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: this.state.imgs.second,*/}
+                  {/*    position: "absolute",*/}
+                  {/*    filter:*/}
+                  {/*      this.state.colors.secondColor.selectedColor === ""*/}
+                  {/*        ? this.state.colors.secondColor.startingColor*/}
+                  {/*        : this.state.colors.secondColor.selectedColor*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={this.state.imgs.third}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: this.state.imgs.third,*/}
+                  {/*    position: "absolute",*/}
+                  {/*    filter:*/}
+                  {/*      this.state.colors.thirdColor.selectedColor === ""*/}
+                  {/*        ? this.state.colors.thirdColor.startingColor*/}
+                  {/*        : this.state.colors.thirdColor.selectedColor*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={this.state.imgs.fourth}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: this.state.imgs.fourth,*/}
+                  {/*    position: "absolute",*/}
+                  {/*    filter:*/}
+                  {/*      this.state.colors.fourthColor.selectedColor === ""*/}
+                  {/*        ? this.state.colors.fourthColor.startingColor*/}
+                  {/*        : this.state.colors.fourthColor.selectedColor*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={this.state.imgs.collar}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: this.state.imgs.collar,*/}
+                  {/*    position: "absolute",*/}
+                  {/*    filter:*/}
+                  {/*      this.state.colors.collarColor.selectedColor === ""*/}
+                  {/*        ? this.state.colors.collarColor.startingColor*/}
+                  {/*        : this.state.colors.collarColor.selectedColor*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={this.state.imgs.belt}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: this.state.imgs.belt,*/}
+                  {/*    position: "absolute",*/}
+                  {/*    filter:*/}
+                  {/*      this.state.colors.beltColor.selectedColor === ""*/}
+                  {/*        ? this.state.colors.beltColor.startingColor*/}
+                  {/*        : this.state.colors.beltColor.selectedColor*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={Texture}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: Texture,*/}
+                  {/*    position: "absolute"*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
                   {/*<img*/}
                   {/*	id='collar'*/}
                   {/*	className="img-fluid"*/}
@@ -525,7 +563,11 @@ class Designer extends React.Component {
                     insert={() => this.addText()}
                     incFontSize={this.changeFontSizeHandler}
                   />
-                  {this.props.addLogo && <AddLogo />}
+                  {this.props.addLogo && (
+                    <AddLogo
+                      addLogoToCanvas={e => this.addNewImageElement(e)}
+                    />
+                  )}
                   {this.props.colorPicker && (
                     <div>
                       <div className="row ">
@@ -716,12 +758,68 @@ class Designer extends React.Component {
             </div>
             <div className="row controls-footer">
               <div className="controls-footer__btn ml-auto">
-                <button className="btn m-3 bg-danger text-white text-bold">
+                <button
+                  data-toggle="modal"
+                  data-target="#msgModal"
+                  className="btn m-3 bg-danger text-white text-bold"
+                >
                   Add to Cart
                 </button>
-                <button className="btn m-3 bg-danger text-white text-bold">
+                <button
+                  data-toggle="modal"
+                  data-target="#msgModal"
+                  className="btn m-3 bg-danger text-white text-bold"
+                >
                   Preview
                 </button>
+              </div>
+            </div>
+            <div
+              className="modal fade"
+              id="msgModal"
+              tabIndex="-1"
+              role="dialog"
+              aria-labelledby="msgModalLabel"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="msgModalLabel">
+                      Coming Soon
+                    </h5>
+                    <button
+                      type="button"
+                      className="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div className="modal-body">
+                    <p>
+                      This application is in demo version. Selected feature will
+                      be added soon.
+                    </p>
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button "
+                      className="btn btn-danger"
+                      data-dismiss="modal"
+                    >
+                      OK
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

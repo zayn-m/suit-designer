@@ -62,7 +62,7 @@ const colorPicker = props => (
   <div style={popover} className="color-picker border">
     <div style={cover} onClick={props.handleDisplayColorClose} />
     <div className="m-3">
-      <label>Speedsy Colors</label>
+      <label>Colors</label>
       <hr />
       <CirclePicker
         colors={props.main ? main : props.font ? font : others}

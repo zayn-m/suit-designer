@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./FontSelector.css";
-import { fabric } from "fabric";
+// import { fabric } from "fabric";
 //import FontPicker from "font-picker";
 
 import {
@@ -55,8 +55,8 @@ class FontSelector extends React.Component {
     setTimeout(() => {
       this.props.insert();
       this.setState({ loading: false, showModal: false });
-      $("#inputModal").modal("hide");
-    }, 500);
+      // $("#inputModal").modal("hide");
+    }, 100);
   };
 
   show = () => {
@@ -104,14 +104,13 @@ class FontSelector extends React.Component {
       this.props.show && (
         <div>
           <div>
-            <button
-              className="btn btn-danger mb-5"
-              data-toggle="modal"
-              data-target="#inputModal"
-              onClick={this.showModal}
-            >
-              New text
-            </button>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter text here"
+              onChange={this.inputHandler}
+            />
+
             <div className="row">
               <div className="col-md-6 font-selector-el">
                 <span className="float-left">Font</span>
@@ -211,64 +210,72 @@ class FontSelector extends React.Component {
               {/*  </button>*/}
               {/*</div>*/}
             </div>
+            <button
+              className="btn btn-danger mt-5"
+              data-toggle="modal"
+              data-target="#inputModal"
+              onClick={this.insertHandler}
+            >
+              Add text
+            </button>
           </div>
 
           {/*Modal*/}
 
-          <div
-            className="modal fade"
-            id="inputModal"
-            tabIndex="-1"
-            role="dialog"
-            aria-labelledby="inputModalLabel"
-            aria-hidden="true"
-          >
-            <div className="modal-dialog" role="document">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title" id="inputModalLabel">
-                    Text. Name. Numbers
-                  </h5>
-                  <button
-                    type="button"
-                    className="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div className="modal-body">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Enter text, name, number here"
-                    onChange={this.inputHandler}
-                  />
-                </div>
-                <div className="modal-footer">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button
-                    type="button "
-                    className={
-                      this.state.loading
-                        ? "btn btn-danger disabled"
-                        : "btn btn-danger"
-                    }
-                    onClick={this.insertHandler}
-                  >
-                    Insert
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/*<div*/}
+          {/*  className="modal fade"*/}
+          {/*  id="inputModal"*/}
+          {/*  tabIndex="-1"*/}
+          {/*  role="dialog"*/}
+          {/*  aria-labelledby="inputModalLabel"*/}
+          {/*  aria-hidden="true"*/}
+          {/*>*/}
+          {/*  <div className="modal-dialog" role="document">*/}
+          {/*    <div className="modal-content">*/}
+          {/*      <div className="modal-header">*/}
+          {/*        <h5 className="modal-title" id="inputModalLabel">*/}
+          {/*          Text. Name. Numbers*/}
+          {/*        </h5>*/}
+          {/*        <button*/}
+          {/*          type="button"*/}
+          {/*          className="close"*/}
+          {/*          data-dismiss="modal"*/}
+          {/*          aria-label="Close"*/}
+          {/*        >*/}
+          {/*          <span aria-hidden="true">&times;</span>*/}
+          {/*        </button>*/}
+          {/*      </div>*/}
+          {/*      <div className="modal-body">*/}
+          {/*        <input*/}
+          {/*          type="text"*/}
+          {/*          className="form-control"*/}
+          {/*          placeholder="Enter text, name, number here"*/}
+          {/*          onChange={this.inputHandler}*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*      <div className="modal-footer">*/}
+          {/*        <button*/}
+          {/*          type="button"*/}
+          {/*          className="btn btn-secondary"*/}
+          {/*          data-dismiss="modal"*/}
+          {/*        >*/}
+          {/*          Close*/}
+          {/*        </button>*/}
+          {/*        <button*/}
+          {/*          type="button "*/}
+          {/*          className={*/}
+          {/*            this.state.loading*/}
+          {/*              ? "btn btn-danger disabled"*/}
+          {/*              : "btn btn-danger"*/}
+          {/*          }*/}
+          {/*          onClick={this.insertHandler}*/}
+          {/*        >*/}
+          {/*          Insert*/}
+          {/*        </button>*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       )
     );

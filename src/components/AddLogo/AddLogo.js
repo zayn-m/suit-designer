@@ -21,11 +21,14 @@ class AddLogo extends React.Component {
   onChangeFile = event => {
     event.stopPropagation();
     event.preventDefault();
+    console.log(event.target.files[0]);
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
       reader.onload = e => {
+        console.log(reader);
         const imgs = this.state.imgs;
         imgs.push(e.target.result);
+        this.props.addLogo(e.target.result);
         this.setState({ imgs: imgs });
       };
       reader.readAsDataURL(event.target.files[0]);
@@ -34,14 +37,17 @@ class AddLogo extends React.Component {
     // console.log(event.target.result);
     // var file = event.target.files[0];
     // console.log(file);
-    // // this.props.addLogo(file);
+    // this.props.addLogo(file);
     // const imgs = this.state.imgs;
     // imgs.push(file);
     // this.setState({ imgs }); /// if you want to upload latter
   };
 
+  addLogoToCanvas = img => {
+    this.props.addLogoToCanvas(img);
+  };
+
   render() {
-    console.log(this.state.imgs);
     return (
       <div>
         <div className="row ">
@@ -58,7 +64,12 @@ class AddLogo extends React.Component {
               onChange={this.onChangeFile}
             />
           </div>
-          {this.state.imgs.map((img, i) => (
+          {this.props.logoImgs.length === 0 && (
+            <p className="mt-5">
+              There are no saved logos here. Click on plus to add a logo.
+            </p>
+          )}
+          {this.props.logoImgs.map((img, i) => (
             <div
               className="col-3 p-0 no-gutters border"
               key={i}
@@ -70,7 +81,11 @@ class AddLogo extends React.Component {
                 src={img}
                 alt="thumbnail"
               />
-              <span className="float-left ml-1" style={{ cursor: "pointer" }}>
+              <span
+                className="float-left ml-1"
+                style={{ cursor: "pointer" }}
+                onClick={() => this.addLogoToCanvas(img)}
+              >
                 <i className="fas fa-plus-square" />
               </span>
             </div>
@@ -81,6 +96,12 @@ class AddLogo extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    logoImgs: state.addLogoReducer.imgs
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     addLogo: img => dispatch(actions.addLogo(img))
@@ -88,6 +109,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(AddLogo);
