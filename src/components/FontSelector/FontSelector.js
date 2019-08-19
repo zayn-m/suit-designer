@@ -64,13 +64,11 @@ class FontSelector extends React.Component {
   };
 
   handleChangeComplete = (event, type) => {
-    console.log(event);
     if (type === "outline") {
       this.setState({ outlineColor: event.hex });
       this.props.changeOutlineColor(event.hex);
       return;
     } else {
-      console.log("else");
       this.setState({ color: event.hex });
       this.props.changeColor(event.hex);
     }

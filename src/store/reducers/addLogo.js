@@ -9,7 +9,7 @@ const addLogoReducer = (state = initialState, action) => {
     case actionType.ADD_LOGO:
       let images = state.imgs;
       images.push(action.img);
-      console.log(images);
+
       return {
         ...state,
         imgs: images

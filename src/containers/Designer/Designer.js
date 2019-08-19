@@ -2,50 +2,39 @@ import React from "react";
 import "./Designer.css";
 import { connect } from "react-redux";
 import { fabric } from "fabric";
-import $ from "jquery";
-import { CirclePicker } from "react-color";
-import PinchZoomPan from "react-responsive-pinch-zoom-pan";
-import ReactImageZoom from "react-image-zoom";
+import "fabric-customise-controls";
+
 import * as actions from "../../store/actions/index";
 
 import Layer from "../../components/Layer/Layer";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import FontSelector from "../../components/FontSelector/FontSelector";
 import AddLogo from "../../components/AddLogo/AddLogo";
-
-import ProductMain from "../../assets/images/product/outline.png";
-import ProductCollar from "../../assets/images/product/second.png";
-import Img from "../../assets/images/product/product1-main.png";
-
-import Suit1 from "../../assets/images/product/suit.png";
 import Suit2 from "../../assets/images/product/suit1.png";
 import collar1 from "../../assets/images/product/COLAR 1.png";
-import collar2 from "../../assets/images/product/COLAR 2.png";
-import Dummy from "../../assets/images/product/dummy.png";
-import Texture from "../../assets/images/product/suit/texture.png";
-import Main from "../../assets/images/product/suit/suit-base.png";
-import Second from "../../assets/images/product/suit/strip1.png";
-import Third from "../../assets/images/product/suit/strip2.png";
-import Fourth from "../../assets/images/product/suit/knees.png";
-import Collar from "../../assets/images/product/suit/collar.png";
-import Belt from "../../assets/images/product/suit/belt.png";
-
-import Logo from "../../assets/images/logo/jordan.png";
 
 import { res } from "./FilterGenerator";
 
-const imgProps = {
-  width: 350,
-  height: 700,
-  scale: 1.5,
-  offset: { vertical: 0, horizontal: 10 }
-};
+// const imgProps = {
+//   width: 350,
+//   height: 700,
+//   scale: 1.5,
+//   offset: { vertical: 0, horizontal: 10 }
+// };
+
+const dataImage = [
+  "https://cdn1.iconfinder.com/data/icons/streamline-interface/60/cell-8-10-120.png" /*scale*/,
+  "https://cdn1.iconfinder.com/data/icons/ui-color/512/Untitled-12-128.png" /*delete*/,
+  "https://cdn2.iconfinder.com/data/icons/social-messaging-productivity-1/128/sync-16.png" /*rotate*/,
+  "https://cdn2.iconfinder.com/data/icons/social-messaging-productivity-1/128/write-compose-16.png" /*change text*/,
+  "https://cdn3.iconfinder.com/data/icons/social-messaging-productivity-1/128/save-16.png" /*save*/
+];
 
 class Designer extends React.Component {
   state = {
     image: null,
     output: "",
-
+    side: "front",
     colors: {
       mainColor: {
         displayColorPicker: false,
@@ -103,18 +92,7 @@ class Designer extends React.Component {
     imgs: {}
   };
 
-  componentWillMount() {
-    //this.setState({ imgs: this.props.location.state.product.front });
-    // this.setState(prevState => ({
-    //   ...prevState.imgs,
-    //   imgs: {
-    //     ...this.props.location.state.product.front
-    //   }
-    // }));
-  }
-
   componentDidMount() {
-    console.log(this.props.insertedText);
     // Make a New Canvas
     this.__canvas = new fabric.Canvas("meCanvas", {
       preserveObjectStacking: true
@@ -140,7 +118,13 @@ class Designer extends React.Component {
       left: 100,
       top: 100,
       myid: newID,
-      objecttype: "text"
+      objecttype: "text",
+      side: this.state.side
+    });
+    text.customiseCornerIcons({
+      mtr: {
+        icon: dataImage[1]
+      }
     });
     // text.setControlsVisibility(this.state.controls);
     text.setColor(this.props.fontColor);
@@ -159,7 +143,6 @@ class Designer extends React.Component {
   };
 
   changeFontSizeHandler = () => {
-    console.log("size");
     const activeObject = this.__canvas.getActiveObject();
     let size = this.props.fontSize;
 
@@ -168,7 +151,6 @@ class Designer extends React.Component {
   };
 
   addNewImageElement(e) {
-    console.log(e);
     // var reader = new FileReader();
     // reader.onload = function(event) {
     //   var img = new Image();
@@ -204,7 +186,8 @@ class Designer extends React.Component {
       const legimg = new fabric.Image(img, {
         left: 0,
         top: 0,
-        lockUniScaling: true
+        lockUniScaling: true,
+        side: this.state.side
       });
       legimg.scaleToWidth(80);
       legimg.scaleToHeight(80);
@@ -256,7 +239,7 @@ class Designer extends React.Component {
     if (key && code) {
       const r = res(code);
       const filter = r.filter.split(":")[1].split(";")[0];
-      console.log("if");
+
       this.setState(prevState => ({
         ...prevState,
         colors: {
@@ -270,7 +253,6 @@ class Designer extends React.Component {
         }
       }));
     } else {
-      console.log("else");
       this.setState(prevState => ({
         ...prevState,
         colors: {
@@ -287,13 +269,23 @@ class Designer extends React.Component {
     }
   };
 
-  changeSideHandler = product => {
-    this.setState({ imgs: product });
+  changeSideHandler = (product, side) => {
+    this.setState({ side: side, imgs: product });
+
+    this.__canvas.getObjects().map(function(o) {
+      if (o.side === side) {
+        return (o.visible = true);
+      } else {
+        return (o.visible = false);
+      }
+    });
+
+    this.__canvas.renderAll();
   };
 
   render() {
-    console.log(this.state.imgs);
     const front = this.props.location.state.product.front;
+    console.log(this.state.imgs);
     const back = this.props.location.state.product.back;
     const left = this.props.location.state.product.left;
     const right = this.props.location.state.product.right;
@@ -307,10 +299,10 @@ class Designer extends React.Component {
         </div>
 
         <div className="row configurator">
-          <div className="col-1 ">
+          <div className="col-3 col-md-1 ">
             <div
               className="col-12 preview-box border"
-              onClick={() => this.changeSideHandler(front)}
+              onClick={() => this.changeSideHandler(front, "front")}
             >
               <img
                 className="img-fluid"
@@ -321,7 +313,7 @@ class Designer extends React.Component {
             </div>
             <div
               className="col-12 preview-box p-0 border"
-              onClick={() => this.changeSideHandler(back)}
+              onClick={() => this.changeSideHandler(back, "back")}
             >
               <img
                 className="img-fluid"
@@ -353,7 +345,7 @@ class Designer extends React.Component {
               />
             </div>
           </div>
-          <div id="canvas-wrap" className="col-7 border ">
+          <div id="canvas-wrap" className="col-8 col-md-7 border ">
             <canvas
               className="canvas "
               height={580}
@@ -399,7 +391,20 @@ class Designer extends React.Component {
                     selectedColor={this.state.colors.beltColor.selectedColor}
                     startingColor={this.state.colors.beltColor.startingColor}
                   />
-                  {/*<Layer img={Texture} />*/}
+                  <Layer img={this.state.imgs.texture} />
+
+                  {/*<img*/}
+                  {/*  className="img-fluid"*/}
+                  {/*  src={Texture}*/}
+                  {/*  style={{*/}
+                  {/*    marginLeft: "-10rem",*/}
+                  {/*    width: "18rem",*/}
+                  {/*    height: "40rem",*/}
+                  {/*    backgroundImage: Texture,*/}
+                  {/*    position: "absolute"*/}
+                  {/*  }}*/}
+                  {/*  alt="product"*/}
+                  {/*/>*/}
 
                   {/*<img*/}
                   {/*  className="img-fluid"*/}
@@ -524,7 +529,7 @@ class Designer extends React.Component {
 							</div>
 						)}
 					</div> */}
-          <div className="col-4 controls">
+          <div className="col-12 col-md-4 controls">
             <div className="row">
               <div className="col-2">
                 {/* <span>

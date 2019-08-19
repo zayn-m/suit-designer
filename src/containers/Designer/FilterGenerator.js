@@ -285,7 +285,6 @@ class Solver {
 
   css(filters) {
     function fmt(idx, multiplier = 1) {
-      console.log(idx, multiplier);
       return Math.round(filters[idx] * multiplier);
     }
     // $('#collar').css('filter', 'saturate(0%) brightness(0%) contrast(100%)');
@@ -341,8 +340,7 @@ export function res(hex) {
     lossMsg = console.log("The color is extremely off. Run it again!");
     res(hex);
   }
-  console.log(lossMsg);
-  console.log(result);
+
   return result;
 }
 

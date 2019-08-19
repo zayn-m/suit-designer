@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "fabric": "^3.3.2",
+    "fabric-customise-controls": "^2.0.6-beta",
     "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-color": "^2.17.3",

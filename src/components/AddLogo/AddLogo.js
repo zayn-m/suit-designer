@@ -21,11 +21,10 @@ class AddLogo extends React.Component {
   onChangeFile = event => {
     event.stopPropagation();
     event.preventDefault();
-    console.log(event.target.files[0]);
+
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
       reader.onload = e => {
-        console.log(reader);
         const imgs = this.state.imgs;
         imgs.push(e.target.result);
         this.props.addLogo(e.target.result);
@@ -74,6 +73,9 @@ class AddLogo extends React.Component {
               className="col-3 p-0 no-gutters border"
               key={i}
               style={{ height: "4rem" }}
+              data-toggle="tooltip"
+              data-placement="top"
+              title="To place a logo, simply click on +"
             >
               <img
                 className="img-fluid"
