@@ -3,91 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9ad5a3f2-e6bb-499a-b5a9-9ea8d01333f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/avail-products/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/avail-products/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/avail-products/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/avail-products/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/avail-products/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/avail-products/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/avail-products/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/avail-products/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo/jordan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo/jordan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo/pepsi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo/pepsi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/COLAR 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/COLAR 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/COLAR 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/COLAR 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/back/D925841 =ok.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/back/D925841 =ok.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/back/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/back/back.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/back/belt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/back/belt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/back/collar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/back/collar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/back/elbos.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/back/elbos.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/back/shoulder.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/back/shoulder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/dummy.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/dummy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/outline.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/thumbnail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/belt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/belt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/collar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/collar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/knees.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/knees.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/strip1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/strip1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/strip2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/strip2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/suit-base.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/suit-base.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/texture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/thumbnail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/thumbnail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/thumbnail.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/thumbnail.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/thumbnail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product1-collar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product1-collar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product1-collarasd.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product1-collarasd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product1-maidsdn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product1-maidsdn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product1-main.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product1-main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/second.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/second.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/belt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/belt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/collar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/collar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/knees.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/knees.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/strip1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/strip1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/strip2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/strip2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/suit-base.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/suit-base.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/suit/texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/suit/texture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddLogo/AddLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddLogo/AddLogo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ColorPicker/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ColorPicker/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FontSelector/FontSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FontSelector/FontSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/left/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/left/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/left/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/right/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/right/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/right/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Designer/Designer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Designer/Designer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Designer/FilterGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Designer/FilterGenerator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Products/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/Products.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,7 +101,7 @@
       <workItem from="1566211384303" duration="5701000" />
       <workItem from="1566238365060" duration="10000" />
       <workItem from="1566220737498" duration="789000" />
-      <workItem from="1566279619138" duration="986000" />
+      <workItem from="1566279619138" duration="11697000" />
     </task>
     <servers />
   </component>

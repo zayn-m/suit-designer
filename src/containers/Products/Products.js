@@ -14,7 +14,6 @@ import thumbback from "../../assets/images/product/product-1/back/thumbnail.png"
 import mb1 from "../../assets/images/product/product-1/back/1.png";
 import sb1 from "../../assets/images/product/product-1/back/2.png";
 import tb1 from "../../assets/images/product/product-1/back/3.png";
-import fb1 from "../../assets/images/product/product-1/back/4.png";
 import cb1 from "../../assets/images/product/product-1/back/5.png";
 import bb1 from "../../assets/images/product/product-1/back/6.png";
 import txb1 from "../../assets/images/product/product-1/back/texture.png";
@@ -41,28 +40,61 @@ import sf2 from "../../assets/images/product/product-2/front/2.png";
 import tf2 from "../../assets/images/product/product-2/front/3.png";
 import ff2 from "../../assets/images/product/product-2/front/4.png";
 import cf2 from "../../assets/images/product/product-2/front/5.png";
-import bf2 from "../../assets/images/product/product-1/front/belt.png";
+import bf2 from "../../assets/images/product/product-2/front/6.png";
+import txf2 from "../../assets/images/product/product-2/front/texture.png";
 import thumbback2 from "../../assets/images/product/product-2/back/thumbnail.png";
 import mb2 from "../../assets/images/product/product-2/back/1.png";
 import sb2 from "../../assets/images/product/product-2/back/2.png";
 import tb2 from "../../assets/images/product/product-2/back/3.png";
-import fb2 from "../../assets/images/product/product-2/back/4.png";
 import cb2 from "../../assets/images/product/product-2/back/5.png";
-import bb2 from "../../assets/images/product/product-1/back/5.png";
+import bb2 from "../../assets/images/product/product-2/back/6.png";
+import txb2 from "../../assets/images/product/product-2/back/texture.png";
 import thumbleft2 from "../../assets/images/product/product-2/left/thumbnail.png";
 import ml2 from "../../assets/images/product/product-2/left/1.png";
 import sl2 from "../../assets/images/product/product-2/left/2.png";
 import tl2 from "../../assets/images/product/product-2/left/3.png";
-import fl2 from "../../assets/images/product/product-2/left/4.png";
 import cl2 from "../../assets/images/product/product-2/left/5.png";
-import bl2 from "../../assets/images/product/product-1/left/6.png";
+import bl2 from "../../assets/images/product/product-2/left/6.png";
+import txl2 from "../../assets/images/product/product-2/left/texture.png";
 import thumbright2 from "../../assets/images/product/product-2/right/thumbnail.png";
 import mr2 from "../../assets/images/product/product-2/right/1.png";
 import sr2 from "../../assets/images/product/product-2/right/2.png";
 import tr2 from "../../assets/images/product/product-2/right/3.png";
-import fr2 from "../../assets/images/product/product-2/right/4.png";
 import cr2 from "../../assets/images/product/product-2/right/5.png";
-import br2 from "../../assets/images/product/product-1/right/6.png";
+import br2 from "../../assets/images/product/product-2/right/6.png";
+import txr2 from "../../assets/images/product/product-2/right/texture.png";
+
+import mf3 from "../../assets/images/product/product-3/front/1.png";
+import sf3 from "../../assets/images/product/product-3/front/2.png";
+import tf3 from "../../assets/images/product/product-3/front/3.png";
+import ff3 from "../../assets/images/product/product-3/front/4.png";
+import cf3 from "../../assets/images/product/product-3/front/5.png";
+import bf3 from "../../assets/images/product/product-3/front/6.png";
+import txf3 from "../../assets/images/product/product-3/front/texture.png";
+//import thumbback2 from "../../assets/images/product/product-2/back/thumbnail.png";
+import mb3 from "../../assets/images/product/product-3/back/1.png";
+//import sb3 from "../../assets/images/product/product-2/back/2.png";
+import tb3 from "../../assets/images/product/product-3/back/3.png";
+import fb3 from "../../assets/images/product/product-3/back/4.png";
+import cb3 from "../../assets/images/product/product-3/back/5.png";
+import bb3 from "../../assets/images/product/product-3/back/6.png";
+import txb3 from "../../assets/images/product/product-3/back/texture.png";
+//import thumbleft2 from "../../assets/images/product/product-2/left/thumbnail.png";
+import ml3 from "../../assets/images/product/product-3/left/1.png";
+import sl3 from "../../assets/images/product/product-3/left/2.png";
+import tl3 from "../../assets/images/product/product-3/left/3.png";
+import fl3 from "../../assets/images/product/product-3/left/4.png";
+import cl3 from "../../assets/images/product/product-3/left/5.png";
+import bl3 from "../../assets/images/product/product-3/left/6.png";
+import txl3 from "../../assets/images/product/product-3/left/texture.png";
+// import thumbright2 from "../../assets/images/product/product-2/right/thumbnail.png";
+import mr3 from "../../assets/images/product/product-3/right/1.png";
+import sr3 from "../../assets/images/product/product-3/right/2.png";
+import tr3 from "../../assets/images/product/product-3/right/3.png";
+import fr3 from "../../assets/images/product/product-3/right/4.png";
+import cr3 from "../../assets/images/product/product-3/right/5.png";
+import br3 from "../../assets/images/product/product-3/right/6.png";
+import txr3 from "../../assets/images/product/product-3/right/texture.png";
 
 var colors = [];
 
@@ -136,34 +168,82 @@ class Designer extends React.Component {
           third: tf2,
           fourth: ff2,
           collar: cf2,
-          belt: bf2
+          belt: bf2,
+          texture: txf2
         },
         back: {
           thumb: thumbback2,
           main: mb2,
           second: sb2,
           third: tb2,
-          fourth: fb2,
+          fourth: null,
           collar: cb2,
-          belt: bb2
+          belt: bb2,
+          texture: txb2
         },
         left: {
           thumb: thumbleft2,
           main: ml2,
           second: sl2,
           third: tl2,
-          fourth: fl2,
+          fourth: null,
           collar: cl2,
-          belt: bl2
+          belt: bl2,
+          texture: txl2
         },
         right: {
           thumb: thumbright2,
           main: mr2,
           second: sr2,
           third: tr2,
-          fourth: fr2,
+          fourth: null,
           collar: cr2,
-          belt: br2
+          belt: br2,
+          texture: txr2
+        }
+      },
+      {
+        id: 2,
+        title: "Product 3",
+        front: {
+          thumb: thumbfront2,
+          main: mf3,
+          second: sf3,
+          third: tf3,
+          fourth: ff3,
+          collar: cf3,
+          belt: bf3,
+          texture: txf3
+        },
+        back: {
+          thumb: thumbback2,
+          main: mb3,
+          second: null,
+          third: tb3,
+          fourth: fb3,
+          collar: cb3,
+          belt: bb3,
+          texture: txb3
+        },
+        left: {
+          thumb: thumbleft2,
+          main: ml3,
+          second: sl3,
+          third: tl3,
+          fourth: fl3,
+          collar: cl3,
+          belt: bl3,
+          texture: txl3
+        },
+        right: {
+          thumb: thumbright2,
+          main: mr3,
+          second: sr3,
+          third: tr3,
+          fourth: fr3,
+          collar: cr3,
+          belt: br3,
+          texture: txr3
         }
       }
     ],
@@ -233,7 +313,7 @@ class Designer extends React.Component {
               {this.state.products.map(product => (
                 <div
                   key={product.id}
-                  className="col-3 product-item mx-auto"
+                  className="col-8 col-md-3 product-item mx-auto"
                   style={{ height: "30rem" }}
                 >
                   <img

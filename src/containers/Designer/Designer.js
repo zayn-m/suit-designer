@@ -93,6 +93,7 @@ class Designer extends React.Component {
     this.__canvas.on({
       "object:selected": this.onSelectTextElement
     });
+
     this.setState({ imgs: this.props.location.state.product.front });
   }
 
@@ -169,7 +170,6 @@ class Designer extends React.Component {
   }
 
   handleCanvasClick = e => {
-    console.log("clicked");
     const ne = e.nativeEvent;
     const bb = this.refs.myFabric.getBoundingClientRect();
     const x = Math.round(ne.clientX - bb.left);
