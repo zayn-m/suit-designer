@@ -1,8 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./FontSelector.css";
-// import { fabric } from "fabric";
-//import FontPicker from "font-picker";
 
 import {
   addText,
@@ -128,19 +126,6 @@ class FontSelector extends React.Component {
                     </option>
                   ))}
                 </select>
-
-                {/*/>*/}
-                {/*<FontPicker*/}
-                {/*  id="font-picker"*/}
-                {/*  apiKey="AIzaSyBAJWzPR4-xgWPorqSzWqPCSReWht9733Q"*/}
-                {/*  activeFontFamily={this.state.activeFontFamily}*/}
-                {/*  onChange={nextFont =>*/}
-                {/*    this.setState({*/}
-                {/*      activeFontFamily: nextFont.family*/}
-                {/*    })*/}
-                {/*  }*/}
-                {/*/>*/}
-                {/*<p className="apply-font">The font will be applied to this text.</p>*/}
               </div>
               <div className="col-md-6 font-selector-el">
                 <span className="float-left">Font color</span>
@@ -190,23 +175,6 @@ class FontSelector extends React.Component {
                   />
                 )}
               </div>
-              {/*<div className="col-md-6 font-selector-el">*/}
-              {/*  <h6 className="text-left">Font size</h6>*/}
-              {/*</div>*/}
-              {/*<div className="col-md-6 font-selector-el">*/}
-              {/*  <button*/}
-              {/*    className="btn bg-transparent border mr-1"*/}
-              {/*    onClick={this.props.incFontSize}*/}
-              {/*  >*/}
-              {/*    -*/}
-              {/*  </button>*/}
-              {/*  <button*/}
-              {/*    className="btn bg-transparent border ml-1"*/}
-              {/*    onClick={() => this.changeFontSizeHandler("inc")}*/}
-              {/*  >*/}
-              {/*    +*/}
-              {/*  </button>*/}
-              {/*</div>*/}
             </div>
             <button
               className="btn btn-danger mt-5"
@@ -217,63 +185,6 @@ class FontSelector extends React.Component {
               Add text
             </button>
           </div>
-
-          {/*Modal*/}
-
-          {/*<div*/}
-          {/*  className="modal fade"*/}
-          {/*  id="inputModal"*/}
-          {/*  tabIndex="-1"*/}
-          {/*  role="dialog"*/}
-          {/*  aria-labelledby="inputModalLabel"*/}
-          {/*  aria-hidden="true"*/}
-          {/*>*/}
-          {/*  <div className="modal-dialog" role="document">*/}
-          {/*    <div className="modal-content">*/}
-          {/*      <div className="modal-header">*/}
-          {/*        <h5 className="modal-title" id="inputModalLabel">*/}
-          {/*          Text. Name. Numbers*/}
-          {/*        </h5>*/}
-          {/*        <button*/}
-          {/*          type="button"*/}
-          {/*          className="close"*/}
-          {/*          data-dismiss="modal"*/}
-          {/*          aria-label="Close"*/}
-          {/*        >*/}
-          {/*          <span aria-hidden="true">&times;</span>*/}
-          {/*        </button>*/}
-          {/*      </div>*/}
-          {/*      <div className="modal-body">*/}
-          {/*        <input*/}
-          {/*          type="text"*/}
-          {/*          className="form-control"*/}
-          {/*          placeholder="Enter text, name, number here"*/}
-          {/*          onChange={this.inputHandler}*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div className="modal-footer">*/}
-          {/*        <button*/}
-          {/*          type="button"*/}
-          {/*          className="btn btn-secondary"*/}
-          {/*          data-dismiss="modal"*/}
-          {/*        >*/}
-          {/*          Close*/}
-          {/*        </button>*/}
-          {/*        <button*/}
-          {/*          type="button "*/}
-          {/*          className={*/}
-          {/*            this.state.loading*/}
-          {/*              ? "btn btn-danger disabled"*/}
-          {/*              : "btn btn-danger"*/}
-          {/*          }*/}
-          {/*          onClick={this.insertHandler}*/}
-          {/*        >*/}
-          {/*          Insert*/}
-          {/*        </button>*/}
-          {/*      </div>*/}
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
         </div>
       )
     );

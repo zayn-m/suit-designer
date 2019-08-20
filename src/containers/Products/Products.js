@@ -100,7 +100,7 @@ class Designer extends React.Component {
           main: mb1,
           second: sb1,
           third: tb1,
-          fourth: fb1,
+          fourth: null,
           collar: cb1,
           belt: bb1,
           texture: txb1
@@ -166,30 +166,6 @@ class Designer extends React.Component {
           belt: br2
         }
       }
-
-      //   id: 0,
-      //   title: "Product 1",
-      //   slug: "product-1",
-      //   image: Shirt1
-      // },
-      // {
-      //   id: 1,
-      //   title: "Product 2",
-      //   slug: "product-2",
-      //   image: Shirt2
-      // },
-      // {
-      //   id: 2,
-      //   title: "Product 3",
-      //   slug: "product-3",
-      //   image: Shirt3
-      // },
-      // {
-      //   id: 3,
-      //   title: "Product 4",
-      //   slug: "product-4",
-      //   image: Shirt2
-      // }
     ],
     output: "",
     controls: {

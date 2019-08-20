@@ -32,14 +32,6 @@ class AddLogo extends React.Component {
       };
       reader.readAsDataURL(event.target.files[0]);
     }
-
-    // console.log(event.target.result);
-    // var file = event.target.files[0];
-    // console.log(file);
-    // this.props.addLogo(file);
-    // const imgs = this.state.imgs;
-    // imgs.push(file);
-    // this.setState({ imgs }); /// if you want to upload latter
   };
 
   addLogoToCanvas = img => {

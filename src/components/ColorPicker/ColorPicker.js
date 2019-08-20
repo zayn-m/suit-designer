@@ -14,9 +14,6 @@ const cover = {
   left: "0px"
 };
 
-// var main = [ '#000', '#eee','#EFDA46','#f90000', ];
-// var collar = ['#EFDA46','#f90000', '#ccc', '#eee'];
-
 const main = ["#2b2b2b", "#293f8a", "#E7E7E7", "#b80000"];
 const others = [
   "#2b2b2b",
