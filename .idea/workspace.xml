@@ -3,25 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ad5a3f2-e6bb-499a-b5a9-9ea8d01333f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/back/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/back/thumbnail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/front/texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/front/texture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/left/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/left/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-1/right/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-1/right/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/thumbnail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddLogo/AddLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddLogo/AddLogo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ColorPicker/ColorPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ColorPicker/ColorPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FontSelector/FontSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FontSelector/FontSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Designer/Designer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Designer/Designer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Designer/FilterGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Designer/FilterGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Products/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/addLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/addLogo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +76,7 @@
       <workItem from="1566197954219" duration="10631000" />
       <workItem from="1566211384303" duration="5701000" />
       <workItem from="1566238365060" duration="10000" />
-      <workItem from="1566220737498" duration="502000" />
+      <workItem from="1566220737498" duration="789000" />
     </task>
     <servers />
   </component>
