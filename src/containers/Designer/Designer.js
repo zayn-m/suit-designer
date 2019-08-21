@@ -14,6 +14,7 @@ import SideThumbnail from "../../components/SideThumbnail/SideThumbnail";
 import AddLogo from "../../components/AddLogo/AddLogo";
 import Suit2 from "../../assets/images/product/suit1.png";
 import collar1 from "../../assets/images/product/COLAR 1.png";
+import RotateLogo from "../../assets/images/logo/rotate.jpg";
 
 import { res } from "./FilterGenerator";
 
@@ -115,8 +116,7 @@ class Designer extends React.Component {
     });
     text.customiseCornerIcons({
       mtr: {
-        backgroundColor: "white",
-        icon: dataImage[1]
+        icon: RotateLogo
       }
     });
     // text.setControlsVisibility(this.state.controls);
@@ -150,6 +150,11 @@ class Designer extends React.Component {
         top: 0,
         lockUniScaling: true,
         side: this.state.side
+      });
+      legimg.customiseCornerIcons({
+        mtr: {
+          icon: RotateLogo
+        }
       });
       legimg.scaleToWidth(80);
       legimg.scaleToHeight(80);
@@ -275,12 +280,6 @@ class Designer extends React.Component {
                 side={back}
                 color={this.state.colors}
               />
-              {/*<img*/}
-              {/*  className="img-fluid"*/}
-              {/*  style={{ width: "100%", height: "100%" }}*/}
-              {/*  src={back.thumb}*/}
-              {/*  alt="back"*/}
-              {/*/>*/}
             </div>
             <div
               className="col-12 preview-box border bg-white"

@@ -33,8 +33,8 @@ class FontSelector extends React.Component {
     activeFontFamily: "Open Sans",
     displayColorPicker: false,
     displayOutlineColorPicker: false,
-    color: "#eee",
-    outlineColor: "#fff",
+    color: "#dedcdc",
+    outlineColor: "#9c9c9c",
     font: "Open Sans"
   };
 
