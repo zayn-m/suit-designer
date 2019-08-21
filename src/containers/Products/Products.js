@@ -67,7 +67,7 @@ import txr2 from "../../assets/images/product/product-2/right/texture.png";
 import thumbfront3 from "../../assets/images/product/product-3/front/thumbnail.png";
 import mf3 from "../../assets/images/product/product-3/front/1.png";
 import sf3 from "../../assets/images/product/product-3/front/2.png";
-import tf3 from "../../assets/images/product/product-3/front/3.png";
+
 import ff3 from "../../assets/images/product/product-3/front/4.png";
 import cf3 from "../../assets/images/product/product-3/front/5.png";
 import bf3 from "../../assets/images/product/product-3/front/6.png";
@@ -75,7 +75,7 @@ import txf3 from "../../assets/images/product/product-3/front/texture.png";
 //import thumbback2 from "../../assets/images/product/product-2/back/thumbnail.png";
 import mb3 from "../../assets/images/product/product-3/back/1.png";
 //import sb3 from "../../assets/images/product/product-2/back/2.png";
-import tb3 from "../../assets/images/product/product-3/back/3.png";
+import sb3 from "../../assets/images/product/product-3/back/2.png";
 import fb3 from "../../assets/images/product/product-3/back/4.png";
 import cb3 from "../../assets/images/product/product-3/back/5.png";
 import bb3 from "../../assets/images/product/product-3/back/6.png";
@@ -210,7 +210,7 @@ class Designer extends React.Component {
           thumb: thumbfront3,
           main: mf3,
           second: sf3,
-          third: tf3,
+          third: "",
           fourth: ff3,
           collar: cf3,
           belt: bf3,
@@ -219,8 +219,8 @@ class Designer extends React.Component {
         back: {
           thumb: thumbback2,
           main: mb3,
-          second: "",
-          third: tb3,
+          second: sb3,
+          third: "",
           fourth: fb3,
           collar: cb3,
           belt: bb3,
