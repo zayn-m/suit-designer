@@ -3,28 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ad5a3f2-e6bb-499a-b5a9-9ea8d01333f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/back/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/back/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/front/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/front/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/left/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/left/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/left/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/right/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-2/right/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-2/right/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/product/product-3/front/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/product/product-3/front/6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Designer/Designer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Designer/Designer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Products/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/Products.js" afterDir="false" />
     </list>
@@ -37,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -101,7 +79,8 @@
       <workItem from="1566211384303" duration="5701000" />
       <workItem from="1566238365060" duration="10000" />
       <workItem from="1566220737498" duration="789000" />
-      <workItem from="1566279619138" duration="11697000" />
+      <workItem from="1566279619138" duration="12428000" />
+      <workItem from="1566364525203" duration="6542000" />
     </task>
     <servers />
   </component>

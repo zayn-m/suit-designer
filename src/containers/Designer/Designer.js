@@ -9,6 +9,8 @@ import * as actions from "../../store/actions/index";
 import Layer from "../../components/Layer/Layer";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import FontSelector from "../../components/FontSelector/FontSelector";
+import SideThumbnail from "../../components/SideThumbnail/SideThumbnail";
+
 import AddLogo from "../../components/AddLogo/AddLogo";
 import Suit2 from "../../assets/images/product/suit1.png";
 import collar1 from "../../assets/images/product/COLAR 1.png";
@@ -113,6 +115,7 @@ class Designer extends React.Component {
     });
     text.customiseCornerIcons({
       mtr: {
+        backgroundColor: "white",
         icon: dataImage[1]
       }
     });
@@ -254,47 +257,49 @@ class Designer extends React.Component {
         <div className="row configurator">
           <div className="col-3 col-md-1 ">
             <div
-              className="col-12 preview-box border"
+              className="col-12 preview-box border bg-white"
               onClick={() => this.changeSideHandler(front, "front")}
             >
-              <img
-                className="img-fluid"
-                style={{ width: "100%", height: "100%" }}
-                src={front.thumb}
-                alt="front"
+              <SideThumbnail
+                show="front"
+                side={front}
+                color={this.state.colors}
               />
             </div>
             <div
-              className="col-12 preview-box p-0 border"
+              className="col-12 preview-box p-0 border bg-white"
               onClick={() => this.changeSideHandler(back, "back")}
             >
-              <img
-                className="img-fluid"
-                style={{ width: "100%", height: "100%" }}
-                src={back.thumb}
-                alt="back"
+              <SideThumbnail
+                show="back"
+                side={back}
+                color={this.state.colors}
               />
+              {/*<img*/}
+              {/*  className="img-fluid"*/}
+              {/*  style={{ width: "100%", height: "100%" }}*/}
+              {/*  src={back.thumb}*/}
+              {/*  alt="back"*/}
+              {/*/>*/}
             </div>
             <div
-              className="col-12 preview-box border"
+              className="col-12 preview-box border bg-white"
               onClick={() => this.changeSideHandler(left, "left")}
             >
-              <img
-                className="img-fluid"
-                style={{ width: "100%", height: "100%" }}
-                src={left.thumb}
-                alt="left"
+              <SideThumbnail
+                show="left"
+                side={left}
+                color={this.state.colors}
               />
             </div>
             <div
-              className="col-12 preview-box border"
+              className="col-12 preview-box border bg-white"
               onClick={() => this.changeSideHandler(right, "right")}
             >
-              <img
-                className="img-fluid"
-                style={{ width: "100%", height: "100%" }}
-                src={right.thumb}
-                alt="right"
+              <SideThumbnail
+                show="right"
+                side={right}
+                color={this.state.colors}
               />
             </div>
           </div>

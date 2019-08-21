@@ -64,6 +64,7 @@ import cr2 from "../../assets/images/product/product-2/right/5.png";
 import br2 from "../../assets/images/product/product-2/right/6.png";
 import txr2 from "../../assets/images/product/product-2/right/texture.png";
 
+import thumbfront3 from "../../assets/images/product/product-3/front/thumbnail.png";
 import mf3 from "../../assets/images/product/product-3/front/1.png";
 import sf3 from "../../assets/images/product/product-3/front/2.png";
 import tf3 from "../../assets/images/product/product-3/front/3.png";
@@ -132,7 +133,7 @@ class Designer extends React.Component {
           main: mb1,
           second: sb1,
           third: tb1,
-          fourth: null,
+          fourth: "",
           collar: cb1,
           belt: bb1,
           texture: txb1
@@ -176,7 +177,7 @@ class Designer extends React.Component {
           main: mb2,
           second: sb2,
           third: tb2,
-          fourth: null,
+          fourth: "",
           collar: cb2,
           belt: bb2,
           texture: txb2
@@ -186,7 +187,7 @@ class Designer extends React.Component {
           main: ml2,
           second: sl2,
           third: tl2,
-          fourth: null,
+          fourth: "",
           collar: cl2,
           belt: bl2,
           texture: txl2
@@ -196,7 +197,7 @@ class Designer extends React.Component {
           main: mr2,
           second: sr2,
           third: tr2,
-          fourth: null,
+          fourth: "",
           collar: cr2,
           belt: br2,
           texture: txr2
@@ -206,7 +207,7 @@ class Designer extends React.Component {
         id: 2,
         title: "Product 3",
         front: {
-          thumb: thumbfront2,
+          thumb: thumbfront3,
           main: mf3,
           second: sf3,
           third: tf3,
@@ -218,7 +219,7 @@ class Designer extends React.Component {
         back: {
           thumb: thumbback2,
           main: mb3,
-          second: null,
+          second: "",
           third: tb3,
           fourth: fb3,
           collar: cb3,
